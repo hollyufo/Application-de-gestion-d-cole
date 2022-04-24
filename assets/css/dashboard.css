@@ -339,3 +339,40 @@ ul {
     align-items: center;
     justify-content: space-evenly;
 }
+.main1{
+    padding: 10px;
+}
+.teacher-img{
+
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.img-name{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.info-card{
+    color: #695CFE;
+    font-weight: bold;
+}
+.c--flux{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.info2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

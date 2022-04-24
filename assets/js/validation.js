@@ -14,11 +14,11 @@ form.addEventListener('submit', (e) => {
         index++
         email.classList.add("is-invalid");
         emailErrorField.innerText = "email is required."
-    }
-    if(patterns.test(email.value) == false){
-        index++
-        email.classList.add("is-invalid");
-        emailErrorField.innerText = "This is not a valid Email."
+        if(patterns.test(email.value) == false){
+            index++
+            email.classList.add("is-invalid");
+            emailErrorField.innerText = "This is not a valid Email."
+        }
     }
     // testing password if it pass regex
     if(passpattern.test(password.value) == false){
