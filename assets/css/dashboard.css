@@ -376,3 +376,9 @@ ul {
     justify-content: space-around;
     align-items: center;
 }
+.editform{
+    margin-top: 70px !important;
+    width: 50%;
+    margin: auto;
+    min-width: 300px;
+}
