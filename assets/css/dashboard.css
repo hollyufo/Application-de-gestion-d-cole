@@ -321,6 +321,7 @@ ul {
 }
 .card{
     min-width: 260px;
+    max-width: 300PX;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .dahsboard-icon{
