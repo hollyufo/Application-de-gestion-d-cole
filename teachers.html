@@ -55,9 +55,9 @@
                     </li>
 
                     <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-bell icon'></i>
-                            <span class="text nav-text">Notifications</span>
+                        <a href="./students.html">
+                            <i class='bx bx-user-circle icon'></i>
+                            <span class="text nav-text">Student</span>
                         </a>
                     </li>
 
@@ -249,7 +249,7 @@
             <form id="form-contact" action="" method="POST">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Full name</label>
-                    <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Full Name">
+                    <input type="text" id="fullname" name="fullname" class="form-select" placeholder="Full Name">
                     <p class="" style="color: red;" id ="nameerror"></p>
                 </div>
                 <div class="mb-3">
@@ -259,7 +259,10 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Class</label>
-                    <input type="text" class="form-control" name="class" id="class" placeholder="name of class">
+                    <select class="form-select" name="class" id="class">
+                        <option value="one">one</option>
+                        <option value="two">two</option>
+                    </select>
                     <p class="" style="color: red;" id ="classerror"></p>
                 </div>
                 <div class="mb-3">
