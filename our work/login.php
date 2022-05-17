@@ -17,7 +17,7 @@ background-repeat: no-repeat; background-size: 100%; background-position: center
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="./index.html">School management</a>
-                <a href="./login.html" class="btn btn-dark d-flex">Login</a>
+                <a href="./login.view.php" class="btn btn-dark d-flex">Login</a>
             </div>
         </nav>
         <div class="">

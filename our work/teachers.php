@@ -13,7 +13,7 @@
                     <div class="card">
                         <div class="main1">
                             <div class="img-name d-flex flex-column m-3 ">
-                                <img src="./assets/img/blank-profile-picture-973460_640.png" class="rounded-circle teacher-img" alt="user">
+                                <img src="./views/assets/img/blank-profile-picture-973460_640.png" class="rounded-circle teacher-img" alt="user">
                                 <br>
                                 <div id="questions">
                                     <h5 class="border-0 bg-white name info-card w-100 text-center" role="button" data-bs-toggle="collapse" data-bs-target="#question-one">
@@ -52,7 +52,7 @@
                                 </div>
                             </div>
                             <div class="info2">
-                                <a href="editteacher.php" class="btn btn-primary">Edit</a>
+                                <a href="editteacher" class="btn btn-primary">Edit</a>
                                 <a href="#" class="btn btn-danger">Delete</a>
                             </div>
                         </div>
@@ -118,8 +118,8 @@
       </div>
     </div>
   </div>
-    <script src="./assets/js/dashboard.js"></script>
-    <script src="./assets/js/teachervalidation.js" ></script>
+    <script src="./views/assets/js/dashboard.js"></script>
+    <script src="./views/assets/js/teachervalidation.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </body>
