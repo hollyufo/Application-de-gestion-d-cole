@@ -63,14 +63,14 @@
 
                     <li class="nav-link">
                         <a href="./parents.php">
-                            <i class='bx bx-building icon'></i>
+                            <i class='bx bx-run icon'></i>
                             <span class="text nav-text">Parents</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
                         <a href="./classes.php">
-                            <i class='bx bx-user icon'></i>
+                            <i class='bx bx-building icon'></i>
                             <span class="text nav-text">Classes</span>
                         </a>
                     </li>
