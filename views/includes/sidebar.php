@@ -41,35 +41,35 @@
 
                 <ul class="menu-links">
                     <li class="nav-link">
-                        <a href="./dashboard.php">
+                        <a href="./dashboard">
                             <i class='bx bx-home-alt icon' ></i>
                             <span class="text nav-text">Dashboard</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="./teachers.php">
+                        <a href="./teachers">
                           <i class='bx bx-id-card icon' ></i>
                             <span class="text nav-text">Teachers</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="./students.php">
+                        <a href="./students">
                             <i class='bx bx-user-circle icon'></i>
                             <span class="text nav-text">Student</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="./parents.php">
+                        <a href="./parents">
                             <i class='bx bx-run icon'></i>
                             <span class="text nav-text">Parents</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="./classes.php">
+                        <a href="./classes">
                             <i class='bx bx-building icon'></i>
                             <span class="text nav-text">Classes</span>
                         </a>
