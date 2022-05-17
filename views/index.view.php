@@ -10,7 +10,7 @@
 </head>
 <body  class="bg-image"
 style="
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/de/WikiAfrica_Schools_training_African_School_for_Excellence_%2816%29.jpg');
+  background-image: url('https://pbs.twimg.com/media/ERoOffkU0AE-sYm.jpg');
 background-repeat: no-repeat; background-size: 100%; background-position: center;
 ">
     <div style="background-color: lightgrey; opacity: 70%; width: 100%; height: 100vh;">

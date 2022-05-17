@@ -5,5 +5,5 @@
 
 
 Route::get('/',function(){
-    return Route::view("welcome");
+    return Route::view("index");
 });
