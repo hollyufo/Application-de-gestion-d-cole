@@ -1,94 +1,5 @@
-<!-- Coding by CodingLab | www.codinglabweb.com -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!----======== CSS ======== -->
-    <link rel="stylesheet" href="./assets/css/dashboard.css">
-    
-    <!----===== Boxicons CSS ===== -->
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    
-    <title>Parents</title> 
-</head>
-<body>
-    <nav class="sidebar close">
-        <header>
-            <div class="image-text">
-                <span class="image">
-                    <img src="./assets/img/blank-profile-picture-973460_640.png" alt="">
-                </span>
-
-                <div class="text logo-text">
-                    <span class="name">FULL NAME</span>
-                    <span class="profession">ADMIN</span>
-                </div>
-            </div>
-
-            <i class='bx bx-chevron-right toggle'></i>
-        </header>
-
-        <div class="menu-bar">
-            <div class="menu">
-
-                <li class="search-box">
-                    <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Search...">
-                </li>
-
-                <ul class="menu-links">
-                    <li class="nav-link">
-                        <a href="./dashboard.html">
-                            <i class='bx bx-home-alt icon' ></i>
-                            <span class="text nav-text">Dashboard</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="./teachers.html">
-                          <i class='bx bx-id-card icon' ></i>
-                            <span class="text nav-text">Teachers</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="./students.html">
-                            <i class='bx bx-user-circle icon'></i>
-                            <span class="text nav-text">Student</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="./parents.html">
-                            <i class='bx bx-pie-chart-alt icon' ></i>
-                            <span class="text nav-text">Parents</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="./classes.html">
-                            <i class='bx bx-heart icon' ></i>
-                            <span class="text nav-text">Classes</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-
-            <div class="bottom-content">
-                <li class="">
-                    <a href="#">
-                        <i class='bx bx-log-out icon' ></i>
-                        <span class="text nav-text">Logout</span>
-                    </a>
-                </li>
-            </div>
-        </div>
-
-    </nav>
+<!------- sidebar-->
+<?php require_once 'includes/sidebar.php'; ?>
 
     <section class="home">
         <div class="text c--flux">
@@ -133,7 +44,7 @@
                                 </div>
                             </div>
                             <div class="info2">
-                                <a href="./editparent.html" class="btn btn-primary">Edit</a>
+                                <a href="./editparent.php" class="btn btn-primary">Edit</a>
                                 <a href="#" class="btn btn-danger">Delete</a>
                             </div>
                         </div>
@@ -175,7 +86,7 @@
                                 </div>
                             </div>
                             <div class="info2">
-                                <a href="editparent.html" class="btn btn-primary">Edit</a>
+                                <a href="editparent.php" class="btn btn-primary">Edit</a>
                                 <a href="#" class="btn btn-danger">Delete</a>
                             </div>
                         </div>
@@ -189,13 +100,13 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Add parents</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Add Parents</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
             <form id="form-contact" action="" method="POST">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Full name</label>
+                    <label for="exampleFormControlInput1" class="form-label">Full Name</label>
                     <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Full Name">
                     <p class="" style="color: red;" id ="nameerror"></p>
                 </div>

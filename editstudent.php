@@ -12,15 +12,15 @@
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     
-    <title>Edit Parent</title> 
+    <title>Dashboard</title> 
 </head>
 <body class="">
     <section class="home">
         <div class="text c--flux">
-            <span class="sub-text">Edit Parent</span>
+            <span class="sub-text">Edit Student</span>
         </div>
-        <div class="container-fluid ps-5 pe-5 pb-5 w-75">
-            <form id="form-contact" action="" method="POST">
+        <div class="container-fluid ps-5 pe-5 pb-5">
+            <form id="form-contact" class="editform" action="" method="get" >
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Full name</label>
                     <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Full Name">
@@ -32,7 +32,12 @@
                     <p class="" style="color: red;" id ="phoneerror"></p>
                 </div>
                 <div class="mb-3">
-                    <label for="Address" class="form-label">Job</label>
+                    <label for="exampleFormControlInput1" class="form-label">Class</label>
+                    <input type="text" class="form-control" name="class" id="class" placeholder="name of class">
+                    <p class="" style="color: red;" id ="classerror"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="Address" class="form-label">ID</label>
                     <input type="text" class="form-control" name="id" id="id" placeholder="id">
                     <p class="" style="color: red;" id ="iderror"></p>
                 </div>
@@ -45,14 +50,14 @@
                     <p class="" style="color: red;" id ="gendererror"></p>
                 </div>
                 <div class="mb-3">
-                    <label for="subject" class="form-label">Addresse</label>
+                    <label for="subject" class="form-label">Subject</label>
                     <input type="text" class="form-control" name="subject" id="subject" placeholder="subject">
                     <p class="" style="color: red;" id ="subjecterror"></p>
                 </div>
                 <div class="mb-3">
-                    <button name='submit' value="submit" type="submit" class="btn btn-primary">Update</button>
+                    <a name='submit' value="submit" type="submit" class="btn btn-primary">Submit</a>
+                    <a href="./students.php" class="btn btn-secondary ms-4">Cancel</a>
                 </div>
-            </form>
             </form>
         </div>
     </section>

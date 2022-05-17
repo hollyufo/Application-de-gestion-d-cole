@@ -17,10 +17,10 @@
 <body class="">
     <section class="home">
         <div class="text c--flux">
-            <span class="sub-text">Edit Student</span>
+            <span class="sub-text">Edit teacher</span>
         </div>
         <div class="container-fluid ps-5 pe-5 pb-5">
-            <form id="form-contact" class="editform" action="" method="get" >
+            <form id="form-contact" class="editform" action="" >
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Full name</label>
                     <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Full Name">
@@ -56,7 +56,7 @@
                 </div>
                 <div class="mb-3">
                     <a name='submit' value="submit" type="submit" class="btn btn-primary">Submit</a>
-                    <a href="./students.html" class="btn btn-secondary ms-4">Cancel</a>
+                    <a href="./teachers.php" class="btn btn-secondary ms-4">Cancel</a>
                 </div>
             </form>
         </div>

@@ -1,114 +1,25 @@
-<!-- Coding by CodingLab | www.codinglabweb.com -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!----======== CSS ======== -->
-    <link rel="stylesheet" href="./assets/css/dashboard.css">
-    
-    <!----===== Boxicons CSS ===== -->
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    
-    <title>Dashboard</title> 
-</head>
-<body class="">
-    <nav class="sidebar close">
-        <header>
-            <div class="image-text">
-                <span class="image">
-                    <img src="./assets/img/blank-profile-picture-973460_640.png" alt="">
-                </span>
-
-                <div class="text logo-text">
-                    <span class="name">FULL NAME</span>
-                    <span class="profession">ADMIN</span>
-                </div>
-            </div>
-
-            <i class='bx bx-chevron-right toggle'></i>
-        </header>
-
-        <div class="menu-bar">
-            <div class="menu">
-
-                <li class="search-box">
-                    <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Search...">
-                </li>
-
-                <ul class="menu-links">
-                    <li class="nav-link">
-                        <a href="./dashboard.html">
-                            <i class='bx bx-home-alt icon' ></i>
-                            <span class="text nav-text">Dashboard</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="./teachers.html">
-                          <i class='bx bx-id-card icon' ></i>
-                            <span class="text nav-text">Teachers</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="./students.html">
-                            <i class='bx bx-user-circle icon'></i>
-                            <span class="text nav-text">Student</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="./parents.html">
-                            <i class='bx bx-pie-chart-alt icon' ></i>
-                            <span class="text nav-text">Parents</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="./classes.html">
-                            <i class='bx bx-heart icon' ></i>
-                            <span class="text nav-text">Classes</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-
-            <div class="bottom-content">
-                <li class="">
-                    <a href="#">
-                        <i class='bx bx-log-out icon' ></i>
-                        <span class="text nav-text">Logout</span>
-                    </a>
-                </li>
-            </div>
-        </div>
-
-    </nav>
+<!------- sidebar-->
+<?php require_once 'includes/sidebar.php'; ?>
 
     <section class="home">
         <div class="text c--flux">
-            <span class="sub-text">Manage your teachers</span>
-            <button type="button" class="btn btn-primary mx-5" data-bs-toggle="modal" data-bs-target="#exampleModal">Add New Teacher</button>
+            <span class="sub-text">Manage your students</span>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add New Student</button>
         </div>
-        <div class="container-fluid ps-5 pe-5 pb-5">
-            <div class="row row-cols-1 row-cols-md-4 flex-wrap d-flex justify-content-around ">
-                <!----===== teacher 1 ===== -->
+        <div class="container-fluid ps-5 pe-5 pb-5" id="students">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!----===== Student 1 ===== -->
                 <div class="col">
                     <div class="card">
                         <div class="main1">
                             <div class="img-name d-flex flex-column m-3 ">
                                 <img src="./assets/img/blank-profile-picture-973460_640.png" class="rounded-circle teacher-img" alt="user">
                                 <br>
-                                <div id="questions">
-                                    <h5 class="border-0 bg-white name info-card w-100 text-center" role="button" data-bs-toggle="collapse" data-bs-target="#question-one">
+                                <div id="students">
+                                    <h5 class="border-0 bg-white name info-card w-100 text-center" role="button" data-bs-toggle="collapse" data-bs-target="#student-one">
                                         full name   
                                     </h5>
-                                    <div id="question-one" class="collapse" data-bs-parent="#questions">
+                                    <div id="student-one" class="collapse" data-bs-parent="#students">
                                         <div class="text-center">
                                             <ul>
                                                 <li class="w-100 mt-3 d-flex align-items-center">
@@ -116,16 +27,16 @@
                                                     <p class="mx-2">0609653219</p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">Class :</p>
-                                                    <p class="mx-2">3</p>
+                                                    <p class="text-primary fw-semibold">Class Name :</p>
+                                                    <p class="mx-2">lorem ipsum</p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">ID :</p>
-                                                    <p style="margin-left: 5px;">12345</p>
+                                                    <p class="text-primary fw-semibold">Parent Name :</p>
+                                                    <p style="margin-left: 5px;">lorem ipsum</p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">Gender :</p>
-                                                    <p class="mx-2">Male</p>
+                                                    <p class="text-primary fw-semibold">Student id :</p>
+                                                    <p class="mx-2">16616671</p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
                                                     <p class="text-primary fw-semibold">Gender :</p>
@@ -141,12 +52,13 @@
                                 </div>
                             </div>
                             <div class="info2">
-                                <a href="editstudent.html" class="btn btn-primary">Edit</a>
+                                <a href="editstudent.php" class="btn btn-primary">Edit</a>
                                 <a href="#" class="btn btn-danger">Delete</a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!----===== Student 2 ===== -->
             </div>
         </div>
     </section>
@@ -155,14 +67,14 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Add teacher</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Add students</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
             <form id="form-contact" action="" method="POST">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Full name</label>
-                    <input type="text" id="fullname" name="fullname" class="form-select" placeholder="Full Name">
+                    <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Full Name">
                     <p class="" style="color: red;" id ="nameerror"></p>
                 </div>
                 <div class="mb-3">
@@ -172,10 +84,12 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Class</label>
-                    <select class="form-select" name="class" id="class">
-                        <option value="one">one</option>
-                        <option value="two">two</option>
-                    </select>
+                    <input type="text" class="form-control" name="class" id="class" placeholder="name of class">
+                    <p class="" style="color: red;" id ="classerror"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">parent</label>
+                    <input type="text" class="form-control" name="class" id="parent" placeholder="name of parent">
                     <p class="" style="color: red;" id ="classerror"></p>
                 </div>
                 <div class="mb-3">
@@ -207,9 +121,13 @@
       </div>
     </div>
   </div>
+  
     <script src="./assets/js/dashboard.js"></script>
+
     <script src="./assets/js/teachervalidation.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 
 </body>
 </html>
