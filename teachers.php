@@ -52,7 +52,7 @@
                                 </div>
                             </div>
                             <div class="info2">
-                                <a href="editstudent.php" class="btn btn-primary">Edit</a>
+                                <a href="editteacher.php" class="btn btn-primary">Edit</a>
                                 <a href="#" class="btn btn-danger">Delete</a>
                             </div>
                         </div>
