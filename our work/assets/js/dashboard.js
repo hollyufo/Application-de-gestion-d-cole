@@ -5,7 +5,6 @@ const body = document.querySelector('body'),
       modeSwitch = body.querySelector(".toggle-switch"),
       modeText = body.querySelector(".mode-text");
     const card = body.querySelector('.card');
-    console.log(card);
     
 
 

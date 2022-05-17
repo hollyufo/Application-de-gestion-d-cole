@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    list-style: none;
 }
 
 :root{
@@ -321,6 +322,7 @@ ul {
 }
 .card{
     min-width: 260px;
+    max-width: 300PX;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .dahsboard-icon{
@@ -354,7 +356,6 @@ ul {
     flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
-    padding-bottom: 10px;
 }
 .info{
     display: flex;
