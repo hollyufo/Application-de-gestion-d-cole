@@ -43,3 +43,6 @@ Route::get('/classes',function(){
 Route::get('/editclasse',function(){
     return Route::view("editclasse");
 });
+Route::get('/login',function(){
+    return Route::view("login");
+});
