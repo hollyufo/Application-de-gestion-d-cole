@@ -6,8 +6,8 @@
             <span class="sub-text">Manage your teachers</span>
             <button type="button" class="btn btn-primary mx-5" data-bs-toggle="modal" data-bs-target="#exampleModal">Add New Teacher</button>
         </div>
-        <div class="container-fluid ps-5 pe-5 pb-5">
-            <div class="row row-cols-1 row-cols-md-4 flex-wrap d-flex justify-content-around ">
+        <div class="container-fluid ps-5 pe-5 pb-5" id="teachers">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
                 <!----===== teacher 1 ===== -->
                 <div class="col">
                     <div class="card">
