@@ -5,11 +5,7 @@
 
 
 Route::get('/',function(){
-<<<<<<< Updated upstream
     return Route::view("welcome");
-});
-=======
-    return Route::view("index");
 });
 
 Route::get('/dashboard',function(){
@@ -47,4 +43,3 @@ Route::get('/classes',function(){
 Route::get('/editclasse',function(){
     return Route::view("editclasse");
 });
->>>>>>> Stashed changes
