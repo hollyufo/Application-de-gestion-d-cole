@@ -10,6 +10,11 @@ class userController extends controller{
         // calling login method from the model
         $user = new user();
         $userdata = $user->verifyUser($_POST['email'], $_POST['password']);
+        if($userdata){
+            redirect("/dashboard");
+        }else{
+            echo "Invalid credentials";
+        }
         //var_dump($_SESSION);
         var_dump($userdata);
     }
