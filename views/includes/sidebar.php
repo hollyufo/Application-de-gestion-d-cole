@@ -1,4 +1,3 @@
-<!-- Coding by CodingLab | www.codinglabweb.com -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +21,7 @@
                     <img src="./views/assets/img/blank-profile-picture-973460_640.png" alt="">
                 </span>
                 <div class="text logo-text">
-                    <span class="name">FULL NAME</span>
+                    <span class="name"><?php echo $_SESSION['username']?></span>
                     <span class="profession">ADMIN</span>
                 </div>
             </div>
@@ -78,12 +77,18 @@
 
             <div class="bottom-content">
                 <li class="">
-                    <a href="#">
+                    <a href="./logout">
                         <i class='bx bx-log-out icon' ></i>
                         <span class="text nav-text">Logout</span>
                     </a>
                 </li>
             </div>
         </div>
+        <?php
+            //checking if user is loged in
+            if(!isset($_SESSION['loggedin'])){
+                redirect('/login');
+            }
+        ?>
 
     </nav>

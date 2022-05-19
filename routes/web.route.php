@@ -10,6 +10,9 @@ Route::get('/',function(){
 Route::post('/login',function(){
     return Route::controller("user","login");
 });
+Route::get('/logout',function(){
+    return Route::controller("user","logout");
+});
 
 Route::get('/login',function(){
     return Route::view("login");

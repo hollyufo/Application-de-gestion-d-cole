@@ -1,6 +1,5 @@
 <!------- sidebar-->
 <?php require_once 'includes/sidebar.php'; ?>
-
     <section class="home">
         <div class="text">Dashboard</div>
         <div class="container-fluid ps-5 pe-5 pb-5">
