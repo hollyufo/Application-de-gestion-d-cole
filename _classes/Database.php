@@ -2,10 +2,10 @@
 
 class Database{
 
-    private $host = "localhost";
-    private $dbName = "school";
-    private $username = "root";
-    private $password = "";
+    private $host = HOST;
+    private $dbName = DATABASE;
+    private $username = USER;
+    private $password = PASSWORD;
     
     public $con;
 
