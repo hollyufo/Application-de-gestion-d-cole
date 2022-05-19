@@ -5,7 +5,7 @@
 
 
 Route::get('/',function(){
-    return Route::view("index");
+    return Route::controller("home","index");
 });
 
 Route::get('/login',function(){
