@@ -7,6 +7,9 @@
 Route::get('/',function(){
     return Route::controller("home","index");
 });
+Route::post('/login',function(){
+    return Route::controller("user","user");
+});
 
 Route::get('/login',function(){
     return Route::view("login");
