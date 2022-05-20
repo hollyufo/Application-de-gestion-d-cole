@@ -24,5 +24,26 @@ class userController extends controller{
             session_destroy();
             redirect('./login');
     }
-    
+    // add user to the database
+    public function addUser(){
+        $user = new user();
+        $user->addUser($_POST['username'], $_POST['email'], $_POST['password'], $_POST['role'], $_POST['matricule']);
+        redirect('/admin');
+    }
+    // get all users
+    public function getUsers(){
+        $user = new user();
+        $users = $user->getUsers();
+        return Route::view("admin", $users);
+        //return $users;
+    }
+    // delete user
+    public function deleteUser($id){
+        $user = new user();
+        $data = array(
+            "id" => $id
+        );
+        $user->deleteUser($data['id']);
+        redirect('/admin');
+    }
 }

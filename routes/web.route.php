@@ -18,6 +18,11 @@ Route::get('/login',function(){
     return Route::view("login");
 });
 
+// router to add user
+Route::post('/admin',function(){
+    return Route::controller('user', 'addUser');;
+});
+
 Route::get('/dashboard',function(){
     return Route::view("dashboard");
 });
@@ -55,9 +60,12 @@ Route::get('/editclasse',function(){
 });
 
 Route::get('/admin',function(){
-    return Route::view("admin");
+    return Route::controller('user', 'getUsers');
 });
-
+// deleting admin 
+Route::get('/delete/admin/{id}',function($id){
+    return Route::controller('user', 'deleteUser');
+});
 Route::get('/login',function(){
     return Route::view("login");
 });

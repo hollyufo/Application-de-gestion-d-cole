@@ -24,4 +24,23 @@ class user extends Model{
             return false;
         }
     }
+    // add user to the database
+    public function addUser($fullname, $email, $password, $role, $matricule){
+        // hashing password
+        $password = password_hash($password, PASSWORD_DEFAULT);
+        $sql = "INSERT INTO users VALUES (null, '$fullname', '$email', '$password', '$role', '$matricule')";
+        $this->con->query($sql);
+    }
+    // get all users
+    public function getUsers(){
+        $sql = "SELECT * FROM users";
+        $result = $this->con->query($sql);
+        $data = $result->fetchAll(PDO::FETCH_ASSOC);
+        return $data;
+    }
+    // delete user
+    public function deleteUser($userid){
+        $sql = "DELETE FROM users WHERE userid = '$userid'";
+        $this->con->query($sql);
+    }
 }

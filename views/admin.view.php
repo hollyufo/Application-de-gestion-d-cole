@@ -1,5 +1,7 @@
 <!------- sidebar-->
-<?php require_once 'includes/sidebar.php'; ?>
+<?php require_once 'includes/sidebar.php'; 
+//var_dump($data);
+?>
 
     <section class="home">
         <div class="text c--flux">
@@ -10,46 +12,53 @@
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <!----===== teacher 1 ===== -->
                 <div class="col">
-                    <div class="card">
-                        <div class="main1">
-                            <div class="img-name d-flex flex-column m-3 ">
-                                <img src="./views/assets/img/blank-profile-picture-973460_640.png" class="rounded-circle teacher-img" alt="user">
-                                <br>
-                                <div id="questions">
-                                    <h5 class="border-0 bg-white name info-card w-100 text-center" role="button" data-bs-toggle="collapse" data-bs-target="#question-one">
-                                        full name   
-                                    </h5>
-                                    <div id="question-one" class="collapse" data-bs-parent="#questions">
-                                        <div class="text-center">
-                                            <ul>
-
-                                                <li class="w-100 mt-3 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">Matricule :</p>
-                                                    <p class="mx-2">2022</p>
-                                                </li>
-                                                <li class="w-100 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">Nom :</p>
-                                                    <p class="mx-2">Elkhaldaoui</p>
-                                                </li>
-                                                <li class="w-100 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">Prénom :</p>
-                                                    <p style="margin-left: 5px;">Oussama</p>
-                                                </li>
-                                                <li class="w-100 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">Rôle :</p>
-                                                    <p class="mx-2">Admin</p>
-                                                </li>
-                                        
-                                            </ul>
+                    <?php 
+                        // printing all the admin
+                        foreach($data as $admin){
+                            echo '
+                            <div class="card">
+                            <div class="main1">
+                                <div class="img-name d-flex flex-column m-3 ">
+                                    <img src="./views/assets/img/blank-profile-picture-973460_640.png" class="rounded-circle teacher-img" alt="user">
+                                    <br>
+                                    <div id="questions">
+                                        <h5 class="border-0 bg-white name info-card w-100 text-center" role="button" data-bs-toggle="collapse" data-bs-target="#question-one">
+                                            full name   
+                                        </h5>
+                                        <div id="question-one" class="collapse" data-bs-parent="#questions">
+                                            <div class="text-center">
+                                                <ul>
+    
+                                                    <li class="w-100 mt-3 d-flex align-items-center">
+                                                        <p class="text-primary fw-semibold">Matricule :</p>
+                                                        <p class="mx-2">'.$admin['matricule'].'</p>
+                                                    </li>
+                                                    <li class="w-100 d-flex align-items-center">
+                                                        <p class="text-primary fw-semibold">Full Name :</p>
+                                                        <p class="mx-2">'.$admin['username'].'</p>
+                                                    </li>
+                                                    <li class="w-100 d-flex align-items-center">
+                                                        <p class="text-primary fw-semibold">email :</p>
+                                                        <p style="margin-left: 5px;">'.$admin['useremail'].'</p>
+                                                    </li>
+                                                    <li class="w-100 d-flex align-items-center">
+                                                        <p class="text-primary fw-semibold">Rôle :</p>
+                                                        <p class="mx-2">'.$admin['role'].'</p>
+                                                    </li>
+                                            
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="info2">
-                                <a href="#" class="btn btn-danger">Delete</a>
+                                <div class="info2">
+                                    <a href="./delete/admin/'.$admin['userid'].'" class="btn btn-danger">Delete</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                                ';
+                        }
+                    ?>
                 </div>
             </div>
         </div>
@@ -66,27 +75,27 @@
             <form id="form-contact" action="" method="POST">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Matricule</label>
-                    <input type="text" id="Matricule" name="Matricule" class="form-select" placeholder="Matricule">
+                    <input type="text" id="matricule" name="matricule" class="form-select" placeholder="Matricule">
                     <p class="" style="color: red;" id ="nameerror"></p>
                 </div>
                 <div class="mb-3">
-                    <label for="Nom" class="form-label">Nom</label>
-                    <input type="tel" class="form-control" name="Nom" id="Nom" placeholder="Nom">
+                    <label for="Nom" class="form-label">Full name</label>
+                    <input type="tel" class="form-control" name="username" id="Nom" placeholder="Nom">
                     <p class="" style="color: red;" id ="phoneerror"></p>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Prénom</label>
-                    <input type="tel" class="form-control" name="Prénom" id="Prénom" placeholder="Prénom">
+                    <label for="exampleFormControlInput1" class="form-label">email</label>
+                    <input type="email" class="form-control" name="email" id="Prénom" placeholder="Prénom">
                     <p class="" style="color: red;" id ="classerror"></p>
                 </div>
                 <div class="mb-3">
                     <label for="Rôle" class="form-label">Rôle</label>
-                    <input type="text" class="form-control" name="Rôle" id="Rôle" placeholder="Rôle">
+                    <input type="text" class="form-control" name="role" id="Rôle" placeholder="Rôle">
                     <p class="" style="color: red;" id ="iderror"></p>
                 </div>
                 <div class="mb-3">
                     <label for="Mot de Passe" class="form-label">Mot de Passe</label>
-                    <input type="password" class="form-control" name="Mot de Passe" id="Mot de Passe" placeholder="Mot de Passe">
+                    <input type="password" class="form-control" name="MotdePasse" id="Mot de Passe" placeholder="Mot de Passe">
                     <p class="" style="color: red;" id ="subjecterror"></p>
                 </div>
                 <div class="mb-3">
