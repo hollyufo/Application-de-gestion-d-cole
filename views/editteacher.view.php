@@ -1,4 +1,7 @@
 <!-- Coding by CodingLab | www.codinglabweb.com -->
+<?php
+    print_r($data);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,30 +23,36 @@
             <span class="sub-text">Edit teacher</span>
         </div>
         <div class="container-fluid ps-5 pe-5 pb-5">
-            <form id="form-contact" class="editform" action="" >
+        <form id="form-contact" action="" method="POST">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Full name</label>
-                    <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Full Name">
+                    <input type="hidden" name="teacherId" <?php echo $data['teacherid'] ?>  >
+                    <input type="text" id="fullname" name="fullname" class="form-select" placeholder="Full Name" value="<?php echo $data['teachername']; ?>">
                     <p class="" style="color: red;" id ="nameerror"></p>
                 </div>
                 <div class="mb-3">
                     <label for="Phone" class="form-label">Phone</label>
-                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone">
+                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone" value="<?php echo $data['teacherphone']; ?>">
                     <p class="" style="color: red;" id ="phoneerror"></p>
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Class</label>
-                    <input type="text" class="form-control" name="class" id="class" placeholder="name of class">
+                    <select class="form-select" name="class" id="class">
+                        <option value="<?php echo $data['teacherclass']; ?>"><?php echo $data['teacherclass']; ?></option>
+                        <option value="one">one</option>
+                        <option value="two">two</option>
+                    </select>
                     <p class="" style="color: red;" id ="classerror"></p>
                 </div>
                 <div class="mb-3">
-                    <label for="Address" class="form-label">ID</label>
-                    <input type="text" class="form-control" name="id" id="id" placeholder="id">
+                    <label for="Address" class="form-label">Matrecule</label>
+                    <input type="text" class="form-control" name="matricule" id="id" placeholder="id" value="<?php echo $data['teacheride']; ?>">
                     <p class="" style="color: red;" id ="iderror"></p>
                 </div>
                 <div class="mb-3">
                     <label for="Gender" class="form-label">Gender</label>
                     <select class="form-select" name="gender" id="gender">
+                        <option value="<?php echo $data['teachergender']; ?>"><?php echo $data['teachergender']; ?></option>
                         <option value="male">male</option>
                         <option value="female">female</option>
                     </select>
@@ -51,12 +60,11 @@
                 </div>
                 <div class="mb-3">
                     <label for="subject" class="form-label">Subject</label>
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="subject">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="subject" value="<?php echo $data['teachersubject']; ?>">
                     <p class="" style="color: red;" id ="subjecterror"></p>
                 </div>
                 <div class="mb-3">
-                    <a name='submit' value="submit" type="submit" class="btn btn-primary">Submit</a>
-                    <a href="./teachers" class="btn btn-secondary ms-4">Cancel</a>
+                    <button name='submit' value="submit" type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </form>
         </div>

@@ -49,6 +49,30 @@ Route::get('/students/delete/{id}',function($id){
     return Route::controller('student', 'deleteStudent');
 });
 
+Route::post('/teachers',function(){
+    return Route::controller('teacher', 'addNewTeacher');
+});
+
+Route::get('/teachers',function(){
+    return Route::controller('teacher', 'showAllTeachers');
+});
+
+Route::get('/editteacher/{id}',function($id){
+    return Route::controller('teacher', 'showOneTeacher');
+});
+
+Route::get('/editteacher/{id}',function($id){
+    return Route::controller('teacher', 'showOneTeacher');
+});
+
+Route::post('/editteacher/{id}',function($id){
+    return Route::controller('teacher', 'updateTeacher');
+});
+
+Route::get('/teachers/delete/{id}',function($id){
+    return Route::controller('teacher', 'deleteTeacher');
+});
+
 Route::get('/dashboard',function(){
     return Route::view("dashboard");
 });

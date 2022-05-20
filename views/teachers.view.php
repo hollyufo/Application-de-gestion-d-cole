@@ -8,7 +8,9 @@
         </div>
         <div class="container-fluid ps-5 pe-5 pb-5" id="teachers">
             <div class="row row-cols-1 row-cols-md-3 g-4">
-                <!----===== teacher 1 ===== -->
+            <?php 
+                foreach($data as $teacher){ ?>
+                <!----===== teachers ===== -->
                 <div class="col">
                     <div class="card">
                         <div class="main1">
@@ -17,34 +19,30 @@
                                 <br>
                                 <div id="questions">
                                     <h5 class="border-0 bg-white name info-card w-100 text-center" role="button" data-bs-toggle="collapse" data-bs-target="#question-one">
-                                        full name   
+                                    <?php echo $teacher['teachername'] ?>   
                                     </h5>
                                     <div id="question-one" class="collapse" data-bs-parent="#questions">
                                         <div class="text-center">
                                             <ul>
                                                 <li class="w-100 mt-3 d-flex align-items-center">
                                                     <p class="text-primary fw-semibold">Phone :</p>
-                                                    <p class="mx-2">0609653219</p>
+                                                    <p class="mx-2"><?php echo $teacher['teacherphone'] ?>  </p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
                                                     <p class="text-primary fw-semibold">Class :</p>
-                                                    <p class="mx-2">3</p>
+                                                    <p class="mx-2"><?php echo $teacher['teacherclass'] ?>  </p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">ID :</p>
-                                                    <p style="margin-left: 5px;">12345</p>
-                                                </li>
-                                                <li class="w-100 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">Gender :</p>
-                                                    <p class="mx-2">Male</p>
+                                                    <p class="text-primary fw-semibold">Matrecule :</p>
+                                                    <p style="margin-left: 5px;"><?php echo $teacher['teacheride'] ?>  </p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
                                                     <p class="text-primary fw-semibold">Gender :</p>
-                                                    <p class="mx-2">Male</p>
+                                                    <p class="mx-2"><?php echo $teacher['teachergender'] ?>  </p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
                                                     <p class="text-primary fw-semibold">Subject :</p>
-                                                    <p class="mx-2">lorem ipsum</p>
+                                                    <p class="mx-2"><?php echo $teacher['teachersubject'] ?>  </p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -52,12 +50,13 @@
                                 </div>
                             </div>
                             <div class="info2">
-                                <a href="editteacher" class="btn btn-primary">Edit</a>
-                                <a href="#" class="btn btn-danger">Delete</a>
+                                <a href="./editteacher/<?php echo $teacher['teacherid'] ?>" class="btn btn-primary">Edit</a>
+                                <a href="teachers/delete/<?php echo $teacher['teacherid'] ?>" class="btn btn-danger">Delete</a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <?php } ?>
             </div>
         </div>
     </section>
@@ -90,8 +89,8 @@
                     <p class="" style="color: red;" id ="classerror"></p>
                 </div>
                 <div class="mb-3">
-                    <label for="Address" class="form-label">ID</label>
-                    <input type="text" class="form-control" name="id" id="id" placeholder="id">
+                    <label for="Address" class="form-label">Matrecule</label>
+                    <input type="text" class="form-control" name="matricule" id="id" placeholder="id">
                     <p class="" style="color: red;" id ="iderror"></p>
                 </div>
                 <div class="mb-3">
