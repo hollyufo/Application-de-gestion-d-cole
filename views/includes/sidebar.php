@@ -47,7 +47,7 @@
 
                     <li class="nav-link">
                         <a href="./teachers">
-                          <i class='bx bx-id-card icon' ></i>
+                            <i class='bx bx-id-card icon' ></i>
                             <span class="text nav-text">Teachers</span>
                         </a>
                     </li>
@@ -72,6 +72,14 @@
                             <span class="text nav-text">Classes</span>
                         </a>
                     </li>
+
+                    <li class="nav-link">
+                        <a href="./admin">
+                            <i class='bx bx-male-female icon'></i>
+                            <span class="text nav-text">Admin's</span>
+                        </a>
+                    </li>
+                    
                 </ul>
             </div>
 
