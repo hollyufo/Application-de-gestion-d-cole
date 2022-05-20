@@ -1,4 +1,7 @@
 <!-- Coding by CodingLab | www.codinglabweb.com -->
+<?php
+    // print_r($data)
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,48 +18,64 @@
     <title>Dashboard</title> 
 </head>
 <body class="">
-    <section class="home">
-        <div class="text c--flux">
-            <span class="sub-text">Edit Student</span>
+    <section class="home w-100">
+        <div class="text c--flux w-75 mx-auto">
+            <span class="sub-text h1">Edit Student</span>
         </div>
-        <div class="container-fluid ps-5 pe-5 pb-5">
-            <form id="form-contact" class="editform" action="" method="get" >
+        <div class="container-fluid ps-5 pe-5 pb-5 w-50 mx-auto">
+            <form id="form-contact" action="" method="POST">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Full name</label>
-                    <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Full Name">
+                    <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Full Name" value="<?php echo $data['studentname']; ?>">
                     <p class="" style="color: red;" id ="nameerror"></p>
                 </div>
                 <div class="mb-3">
+                    <input type="hidden" name="studentId" value="<?php echo $data['studentid']; ?>">
                     <label for="Phone" class="form-label">Phone</label>
-                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone">
+                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone"  value="<?php echo $data['studentphone']; ?>">
                     <p class="" style="color: red;" id ="phoneerror"></p>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Class</label>
-                    <input type="text" class="form-control" name="class" id="class" placeholder="name of class">
+                    <label for="exampleFormControlInput1" class="form-label">Class Name</label>
+                    <input type="text" class="form-control" name="class" id="class" placeholder="name of class"  value="<?php echo $data['studentclass']; ?>">
                     <p class="" style="color: red;" id ="classerror"></p>
                 </div>
                 <div class="mb-3">
-                    <label for="Address" class="form-label">ID</label>
-                    <input type="text" class="form-control" name="id" id="id" placeholder="id">
-                    <p class="" style="color: red;" id ="iderror"></p>
+                    <label for="exampleFormControlInput1" class="form-label">Matricule</label>
+                    <input type="number" class="form-control" name="matricule" id="parent" placeholder="Matricule"  value="<?php echo $data['studentide']; ?>">
+                    <p class="" style="color: red;" id ="classerror"></p>
                 </div>
                 <div class="mb-3">
                     <label for="Gender" class="form-label">Gender</label>
                     <select class="form-select" name="gender" id="gender">
+                        <option value="<?php echo $data['studentgender']; ?>"><?php echo $data['studentgender']; ?></option>
                         <option value="male">male</option>
                         <option value="female">female</option>
                     </select>
                     <p class="" style="color: red;" id ="gendererror"></p>
                 </div>
                 <div class="mb-3">
-                    <label for="subject" class="form-label">Subject</label>
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="subject">
+                    <label for="Address" class="form-label">Adresse</label>
+                    <input type="email" class="form-control" name="adresse" id="id" placeholder="email" value="<?php echo $data['studentaddress']; ?>">
+                    <p class="" style="color: red;" id ="iderror"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="Address" class="form-label">email</label>
+                    <input type="email" class="form-control" name="email" id="id" placeholder="email" value="<?php echo $data['studentemail']; ?>">
+                    <p class="" style="color: red;" id ="iderror"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="dob" class="form-label">Date of Birthday</label>
+                    <input type="date" class="form-control" name="dob" id="subject" placeholder="Date of Birthday" value="<?php echo $data['studentbirth']; ?>">
                     <p class="" style="color: red;" id ="subjecterror"></p>
                 </div>
                 <div class="mb-3">
-                    <a name='submit' value="submit" type="submit" class="btn btn-primary">Submit</a>
-                    <a href="./students" class="btn btn-secondary ms-4">Cancel</a>
+                    <label for="subject" class="form-label">Parent Name</label>
+                    <input type="text" class="form-control" name="parent" id="subject" placeholder="subject" value="<?php echo $data['studentparent']; ?>">
+                    <p class="" style="color: red;" id ="subjecterror"></p>
+                </div>
+                <div class="mb-3">
+                    <button name='submit' value="submit" type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </form>
         </div>

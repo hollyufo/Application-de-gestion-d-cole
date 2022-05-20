@@ -7,9 +7,11 @@
 Route::get('/',function(){
     return Route::controller("home","index");
 });
+
 Route::post('/login',function(){
     return Route::controller("user","login");
 });
+
 Route::get('/logout',function(){
     return Route::controller("user","logout");
 });
@@ -21,6 +23,30 @@ Route::get('/login',function(){
 // router to add user
 Route::post('/admin',function(){
     return Route::controller('user', 'addUser');;
+});
+
+Route::post('/students',function(){
+    return Route::controller('student', 'addNewStudent');
+});
+
+Route::get('/students',function(){
+    return Route::controller('student', 'showAllStudents');
+});
+
+Route::get('/editstudent/{id}',function($id){
+    return Route::controller('student', 'showOneStudent');
+});
+
+Route::get('/editstudent/{id}',function($id){
+    return Route::controller('student', 'showOneStudent');
+});
+
+Route::post('/editstudent/{id}',function($id){
+    return Route::controller('student', 'updateStudent');
+});
+
+Route::get('/students/delete/{id}',function($id){
+    return Route::controller('student', 'deleteStudent');
 });
 
 Route::get('/dashboard',function(){
@@ -62,10 +88,12 @@ Route::get('/editclasse',function(){
 Route::get('/admin',function(){
     return Route::controller('user', 'getUsers');
 });
+
 // deleting admin 
 Route::get('/delete/admin/{id}',function($id){
     return Route::controller('user', 'deleteUser');
 });
+
 Route::get('/login',function(){
     return Route::view("login");
 });

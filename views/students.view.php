@@ -1,5 +1,7 @@
 <!------- sidebar-->
-<?php require_once 'includes/sidebar.php'; ?>
+<?php require_once 'includes/sidebar.php'; 
+    // print_r($data);
+?>
 
     <section class="home">
         <div class="text c--flux">
@@ -8,7 +10,9 @@
         </div>
         <div class="container-fluid ps-5 pe-5 pb-5" id="students">
             <div class="row row-cols-1 row-cols-md-3 g-4">
-                <!----===== Student 1 ===== -->
+            <?php 
+                foreach($data as $student){ ?>
+                <!----===== Students ===== -->
                 <div class="col">
                     <div class="card">
                         <div class="main1">
@@ -17,34 +21,34 @@
                                 <br>
                                 <div id="students">
                                     <h5 class="border-0 bg-white name info-card w-100 text-center" role="button" data-bs-toggle="collapse" data-bs-target="#student-one">
-                                        full name   
+                                        <?php echo $student['studentname'] ?>   
                                     </h5>
                                     <div id="student-one" class="collapse" data-bs-parent="#students">
                                         <div class="text-center">
                                             <ul>
                                                 <li class="w-100 mt-3 d-flex align-items-center">
                                                     <p class="text-primary fw-semibold">Phone :</p>
-                                                    <p class="mx-2">0609653219</p>
+                                                    <p class="mx-2"><?php echo $student['studentphone'] ?> </p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
                                                     <p class="text-primary fw-semibold">Class Name :</p>
-                                                    <p class="mx-2">lorem ipsum</p>
+                                                    <p class="mx-2"><?php echo $student['studentclass'] ?> </p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
                                                     <p class="text-primary fw-semibold">Parent Name :</p>
-                                                    <p style="margin-left: 5px;">lorem ipsum</p>
+                                                    <p style="margin-left: 5px;"><?php echo $student['studentparent'] ?> </p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
                                                     <p class="text-primary fw-semibold">Student id :</p>
-                                                    <p class="mx-2">16616671</p>
+                                                    <p class="mx-2"><?php echo $student['studentide'] ?> </p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
                                                     <p class="text-primary fw-semibold">Gender :</p>
-                                                    <p class="mx-2">Male</p>
+                                                    <p class="mx-2"><?php echo $student['studentgender'] ?> </p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">Subject :</p>
-                                                    <p class="mx-2">lorem ipsum</p>
+                                                    <p class="text-primary fw-semibold">Date of Birthday :</p>
+                                                    <p class="mx-2"><?php echo $student['studentbirth'] ?> </p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -52,13 +56,13 @@
                                 </div>
                             </div>
                             <div class="info2">
-                                <a href="editstudent" class="btn btn-primary">Edit</a>
-                                <a href="#" class="btn btn-danger">Delete</a>
+                                <a href="./editstudent/<?php echo $student['studentid'] ?>" class="btn btn-primary">Edit</a>
+                                <a href="students/delete/<?php echo $student['studentid'] ?>" class="btn btn-danger">Delete</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!----===== Student 2 ===== -->
+                <?php } ?>
             </div>
         </div>
     </section>
@@ -83,19 +87,14 @@
                     <p class="" style="color: red;" id ="phoneerror"></p>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Class</label>
+                    <label for="exampleFormControlInput1" class="form-label">Class Name</label>
                     <input type="text" class="form-control" name="class" id="class" placeholder="name of class">
                     <p class="" style="color: red;" id ="classerror"></p>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">parent</label>
-                    <input type="text" class="form-control" name="class" id="parent" placeholder="name of parent">
+                    <label for="exampleFormControlInput1" class="form-label">Matricule</label>
+                    <input type="number" class="form-control" name="matricule" id="parent" placeholder="Matricule">
                     <p class="" style="color: red;" id ="classerror"></p>
-                </div>
-                <div class="mb-3">
-                    <label for="Address" class="form-label">ID</label>
-                    <input type="text" class="form-control" name="id" id="id" placeholder="id">
-                    <p class="" style="color: red;" id ="iderror"></p>
                 </div>
                 <div class="mb-3">
                     <label for="Gender" class="form-label">Gender</label>
@@ -106,8 +105,23 @@
                     <p class="" style="color: red;" id ="gendererror"></p>
                 </div>
                 <div class="mb-3">
-                    <label for="subject" class="form-label">Subject</label>
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="subject">
+                    <label for="Address" class="form-label">Adresse</label>
+                    <input type="email" class="form-control" name="adresse" id="id" placeholder="email">
+                    <p class="" style="color: red;" id ="iderror"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="Address" class="form-label">email</label>
+                    <input type="email" class="form-control" name="email" id="id" placeholder="email">
+                    <p class="" style="color: red;" id ="iderror"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="dob" class="form-label">Date of Birthday</label>
+                    <input type="date" class="form-control" name="dob" id="subject" placeholder="Date of Birthday">
+                    <p class="" style="color: red;" id ="subjecterror"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="subject" class="form-label">Parent Name</label>
+                    <input type="text" class="form-control" name="parent" id="subject" placeholder="subject">
                     <p class="" style="color: red;" id ="subjecterror"></p>
                 </div>
                 <div class="mb-3">
