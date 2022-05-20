@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2022 at 12:39 PM
+-- Generation Time: May 20, 2022 at 04:37 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.1
 
@@ -92,15 +92,17 @@ CREATE TABLE `users` (
   `userid` int(11) NOT NULL,
   `username` varchar(255) DEFAULT NULL,
   `useremail` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL
+  `password` varchar(255) DEFAULT NULL,
+  `role` varchar(255) DEFAULT NULL,
+  `matricule` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`userid`, `username`, `useremail`, `password`) VALUES
-(1, 'imrane', 'chaibi1imran@gmail.com', '$2y$10$5MIfrKQuuoaGkzt0fkmdWeJToO/WjLr6FhOKsdUs8RZeVrSVmQyu6');
+INSERT INTO `users` (`userid`, `username`, `useremail`, `password`, `role`, `matricule`) VALUES
+(1, 'imrane', 'chaibi1imran@gmail.com', '$2y$10$5MIfrKQuuoaGkzt0fkmdWeJToO/WjLr6FhOKsdUs8RZeVrSVmQyu6', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -171,7 +173,7 @@ ALTER TABLE `teachers`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
