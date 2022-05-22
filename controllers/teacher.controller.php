@@ -31,8 +31,8 @@ class teacherController extends controller {
     // update teacher
     public function updateTeacher($id){
         $teacher = new teacher();
-        $id = $_POST['teacherId'];
-        $teacher -> updateTeacher($id, $_POST['fullname'], $_POST['phone'], $_POST['class'], $_POST['matricule'], $_POST['gender'], $_POST['subject']);
+        $id = $_POST['teacherid'];
+        $test = $teacher -> updateTeacher($id, $_POST['fullname'], $_POST['phone'], $_POST['class'], $_POST['matricule'], $_POST['gender'], $_POST['subject']);
         redirect('/teachers');
     }
     // delete teacher 

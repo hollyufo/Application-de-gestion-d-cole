@@ -26,7 +26,7 @@
         <form id="form-contact" action="" method="POST">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Full name</label>
-                    <input type="hidden" name="teacherId" <?php echo $data['teacherid'] ?>  >
+                    <input type="hidden" name="teacherid" value="<?php echo $data['teacherid'] ?>"  >
                     <input type="text" id="fullname" name="fullname" class="form-select" placeholder="Full Name" value="<?php echo $data['teachername']; ?>">
                     <p class="" style="color: red;" id ="nameerror"></p>
                 </div>

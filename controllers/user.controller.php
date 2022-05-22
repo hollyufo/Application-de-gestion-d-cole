@@ -46,4 +46,4 @@ class userController extends controller{
         $user->deleteUser($data['id']);
         redirect('/admin');
     }
-}
+}   
