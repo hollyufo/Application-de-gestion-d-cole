@@ -34,7 +34,9 @@ body{
     background-color: var(--primary-color);
     color: #fff;
 }
-
+.al{
+    overflow: hidden;
+}
 body.dark{
     --body-color: #18191a;
     --sidebar-color: #242526;

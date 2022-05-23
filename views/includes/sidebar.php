@@ -14,7 +14,7 @@
     <title></title>
 </head>
 <body class="">
-    <nav class="sidebar close">
+    <nav class="sidebar close overflow-hidden">
         <header>
             <div class="image-text">
                 <span class="image">
@@ -29,7 +29,7 @@
             <i class='bx bx-chevron-right toggle'></i>
         </header>
 
-        <div class="menu-bar">
+        <div class="menu-bar overflow-hidden">
             <div class="menu">
 
                 <li class="search-box">
