@@ -106,7 +106,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="Address" class="form-label">Adresse</label>
-                    <input type="email" class="form-control" name="adresse" id="id" placeholder="email">
+                    <input type="text" class="form-control" name="adresse" id="id" placeholder="email">
                     <p class="" style="color: red;" id ="iderror"></p>
                 </div>
                 <div class="mb-3">

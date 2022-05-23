@@ -7,7 +7,7 @@
             <button type="button" class="btn btn-primary mx-5" data-bs-toggle="modal" data-bs-target="#exampleModal">Add New Teacher</button>
         </div>
         <div class="container-fluid ps-5 pe-5 pb-5" id="teachers">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
             <?php 
                 foreach($data as $teacher){ ?>
                 <!----===== teachers ===== -->
@@ -25,23 +25,23 @@
                                         <div class="text-center">
                                             <ul>
                                                 <li class="w-100 mt-3 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">Phone :</p>
+                                                    <p class="text-primary fw-semibold">Phone:</p>
                                                     <p class="mx-2"><?php echo $teacher['teacherphone'] ?>  </p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">Class :</p>
+                                                    <p class="text-primary fw-semibold">Class:</p>
                                                     <p class="mx-2"><?php echo $teacher['teacherclass'] ?>  </p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">Matrecule :</p>
+                                                    <p class="text-primary fw-semibold">Matrecule:</p>
                                                     <p style="margin-left: 5px;"><?php echo $teacher['teacheride'] ?>  </p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">Gender :</p>
+                                                    <p class="text-primary fw-semibold">Gender:</p>
                                                     <p class="mx-2"><?php echo $teacher['teachergender'] ?>  </p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">Subject :</p>
+                                                    <p class="text-primary fw-semibold">Subject:</p>
                                                     <p class="mx-2"><?php echo $teacher['teachersubject'] ?>  </p>
                                                 </li>
                                             </ul>
@@ -117,6 +117,7 @@
       </div>
     </div>
   </div>
+
     <script src="./views/assets/js/dashboard.js"></script>
     <script src="./views/assets/js/teachervalidation.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
