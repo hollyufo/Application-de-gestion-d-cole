@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le : lun. 23 mai 2022 à 17:23
--- Version du serveur : 10.4.24-MariaDB
--- Version de PHP : 8.1.6
+-- Host: 127.0.0.1
+-- Generation Time: May 23, 2022 at 11:50 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,24 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `school`
+-- Database: `school`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `classes`
---
-
-CREATE TABLE `classes` (
-  `classid` int(11) NOT NULL,
-  `classname` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `parents`
+-- Table structure for table `parents`
 --
 
 CREATE TABLE `parents` (
@@ -50,7 +39,7 @@ CREATE TABLE `parents` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `students`
+-- Table structure for table `students`
 --
 
 CREATE TABLE `students` (
@@ -67,7 +56,7 @@ CREATE TABLE `students` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `students`
+-- Dumping data for table `students`
 --
 
 INSERT INTO `students` (`studentid`, `studentname`, `studentphone`, `studentclass`, `studentide`, `studentgender`, `studentaddress`, `studentemail`, `studentbirth`, `studentparent`) VALUES
@@ -77,7 +66,7 @@ INSERT INTO `students` (`studentid`, `studentname`, `studentphone`, `studentclas
 -- --------------------------------------------------------
 
 --
--- Structure de la table `teachers`
+-- Table structure for table `teachers`
 --
 
 CREATE TABLE `teachers` (
@@ -91,7 +80,7 @@ CREATE TABLE `teachers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `teachers`
+-- Dumping data for table `teachers`
 --
 
 INSERT INTO `teachers` (`teacherid`, `teachername`, `teacherphone`, `teacherclass`, `teacheride`, `teachergender`, `teachersubject`) VALUES
@@ -102,7 +91,7 @@ INSERT INTO `teachers` (`teacherid`, `teachername`, `teacherphone`, `teacherclas
 -- --------------------------------------------------------
 
 --
--- Structure de la table `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -115,52 +104,52 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`userid`, `username`, `useremail`, `password`, `role`, `matricule`) VALUES
 (6, 'oussama', 'oussama@gmail.com', '$2y$10$k1c2DZ9gMFK4I/q8vHiuxuuOwfamFed14qUFozvv7IawGO..O8zqS', 'zab', '9liwat');
 
 --
--- Index pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `students`
+-- Indexes for table `students`
 --
 ALTER TABLE `students`
   ADD PRIMARY KEY (`studentid`);
 
 --
--- Index pour la table `teachers`
+-- Indexes for table `teachers`
 --
 ALTER TABLE `teachers`
   ADD PRIMARY KEY (`teacherid`);
 
 --
--- Index pour la table `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`userid`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `students`
+-- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
   MODIFY `studentid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT pour la table `teachers`
+-- AUTO_INCREMENT for table `teachers`
 --
 ALTER TABLE `teachers`
   MODIFY `teacherid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT pour la table `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
