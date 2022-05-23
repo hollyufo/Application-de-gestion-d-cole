@@ -73,6 +73,26 @@ Route::get('/teachers/delete/{id}',function($id){
     return Route::controller('teacher', 'deleteTeacher');
 });
 
+Route::post('/parents',function(){
+    return Route::controller('parents', 'addNewParents');
+});
+
+Route::get('/parents',function(){
+    return Route::controller('parents', 'showAllParents');
+});
+
+Route::get('/editparent/{id}',function($id){
+    return Route::controller('parents', 'showOneParents');
+});
+
+Route::post('/editparent/{id}',function($id){
+    return Route::controller('parents', 'updateParent');
+});
+
+Route::get('/parents/delete/{id}',function($id){
+    return Route::controller('parents', 'deleteParent');
+});
+
 Route::get('/dashboard',function(){
     return Route::view("dashboard");
 });
