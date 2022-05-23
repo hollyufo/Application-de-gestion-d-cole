@@ -83,7 +83,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="Phone" class="form-label">Phone</label>
-                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone">
+                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone">
                     <p class="" style="color: red;" id ="phoneerror"></p>
                 </div>
                 <div class="mb-3">
@@ -93,8 +93,8 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Matricule</label>
-                    <input type="number" class="form-control" name="matricule" id="parent" placeholder="Matricule">
-                    <p class="" style="color: red;" id ="classerror"></p>
+                    <input type="number" class="form-control" name="matricule" id="matricule" placeholder="Matricule">
+                    <p class="" style="color: red;" id ="matriculeerror"></p>
                 </div>
                 <div class="mb-3">
                     <label for="Gender" class="form-label">Gender</label>
@@ -106,22 +106,22 @@
                 </div>
                 <div class="mb-3">
                     <label for="Address" class="form-label">Adresse</label>
-                    <input type="text" class="form-control" name="adresse" id="id" placeholder="email">
-                    <p class="" style="color: red;" id ="iderror"></p>
+                    <input type="text" class="form-control" name="adresse" id="adresse" placeholder="adresse">
+                    <p class="" style="color: red;" id ="adresserror"></p>
                 </div>
                 <div class="mb-3">
                     <label for="Address" class="form-label">email</label>
-                    <input type="email" class="form-control" name="email" id="id" placeholder="email">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="email">
                     <p class="" style="color: red;" id ="iderror"></p>
                 </div>
                 <div class="mb-3">
                     <label for="dob" class="form-label">Date of Birthday</label>
-                    <input type="date" class="form-control" name="dob" id="subject" placeholder="Date of Birthday">
+                    <input type="date" class="form-control" name="dob" id="dob" placeholder="Date of Birthday">
                     <p class="" style="color: red;" id ="subjecterror"></p>
                 </div>
                 <div class="mb-3">
-                    <label for="subject" class="form-label">Parent Name</label>
-                    <input type="text" class="form-control" name="parent" id="subject" placeholder="subject">
+                    <label for="parent" class="form-label">Parent Name</label>
+                    <input type="text" class="form-control" name="parent" id="parent" placeholder="parent name">
                     <p class="" style="color: red;" id ="subjecterror"></p>
                 </div>
                 <div class="mb-3">
