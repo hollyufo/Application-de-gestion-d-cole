@@ -15,11 +15,11 @@
     <title>Dashboard</title> 
 </head>
 <body class="">
-    <section class="home">
-        <div class="text c--flux">
-            <span class="sub-text">Edit teacher</span>
+    <section class="home w-100">
+        <div class="text c--flux w-75 mx-auto">
+            <span class="sub-text h1">Edit teacher</span>
         </div>
-        <div class="container-fluid ps-5 pe-5 pb-5">
+        <div class="container-fluid ps-5 pe-5 pb-5 w-50 mx-auto">
         <form id="form-contact" action="" method="POST">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Full name</label>
