@@ -25,33 +25,6 @@
             </div>
             <div class="col">
               <div class="card h-100 w-100">
-                <i class='bx bx-male-female dahsboard-icon' ></i>
-                <div class="card-body">
-                  <h5 class="card-title">Gender</h5>
-                  <p class="card-text c-flex">Male <span class="strong-number">2</span> Female<span class="strong-number">2</span></p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100 w-100">
-                <i class='bx bxs-school dahsboard-icon' ></i>
-                <div class="card-body">
-                  <h5 class="card-title">Classes</h5>
-                  <p class="card-text">Number of classes is <span class="strong-number">2</span></p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100 w-100">
-                <i class='bx bx-user dahsboard-icon'></i>
-                <div class="card-body">
-                  <h5 class="card-title">administrators</h5>
-                  <p class="card-text">Number of administrators is <span class="strong-number">2</span></p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100 w-100">
                 <i class='bx bxs-face dahsboard-icon' ></i>
                 <div class="card-body">
                   <h5 class="card-title">Admin</h5>

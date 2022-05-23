@@ -65,14 +65,6 @@
                             <span class="text nav-text">Parents</span>
                         </a>
                     </li>
-
-                    <li class="nav-link">
-                        <a href="./classes">
-                            <i class='bx bx-building icon'></i>
-                            <span class="text nav-text">Classes</span>
-                        </a>
-                    </li>
-
                     <li class="nav-link">
                         <a href="./admin">
                             <i class='bx bx-male-female icon'></i>
