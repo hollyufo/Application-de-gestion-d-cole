@@ -34,7 +34,7 @@
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
                                                     <p class="text-primary fw-semibold">Matrecule:</p>
-                                                    <p style="margin-left: 5px;"><?php echo $teacher['teachermatricule'] ?>  </p>
+                                                    <p style="margin-left: 5px;"><?php echo $teacher['teacheride'] ?>  </p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
                                                     <p class="text-primary fw-semibold">Gender:</p>
