@@ -10,12 +10,10 @@
         </div>
         <div class="container-fluid ps-5 pe-5 pb-5" id="teachers">
             <div class="row row-cols-1 row-cols-md-3 g-4">
-                <!----===== teacher 1 ===== -->
+            <?php
+                foreach($data as $admin){?>
+                <!----===== admins ===== -->
                 <div class="col">
-                    <?php 
-                        // printing all the admin
-                        foreach($data as $admin){
-                            echo '
                             <div class="card">
                             <div class="main1">
                                 <div class="img-name d-flex flex-column m-3 ">
@@ -23,43 +21,39 @@
                                     <br>
                                     <div id="questions">
                                         <h5 class="border-0 bg-white name info-card w-100 text-center" role="button" data-bs-toggle="collapse" data-bs-target="#question-one">
-                                            full name   
+                                            <?php echo $admin['username'] ?>  
                                         </h5>
                                         <div id="question-one" class="collapse" data-bs-parent="#questions">
                                             <div class="text-center">
                                                 <ul>
-    
                                                     <li class="w-100 mt-3 d-flex align-items-center">
                                                         <p class="text-primary fw-semibold">Matricule :</p>
-                                                        <p class="mx-2">'.$admin['matricule'].'</p>
+                                                        <p class="mx-2"><?php echo $admin['matricule'] ?></p>
                                                     </li>
                                                     <li class="w-100 d-flex align-items-center">
                                                         <p class="text-primary fw-semibold">Full Name :</p>
-                                                        <p class="mx-2">'.$admin['username'].'</p>
+                                                        <p class="mx-2"><?php echo $admin['username'] ?></p>
                                                     </li>
                                                     <li class="w-100 d-flex align-items-center">
                                                         <p class="text-primary fw-semibold">email :</p>
-                                                        <p style="margin-left: 5px;">'.$admin['useremail'].'</p>
+                                                        <p style="margin-left: 5px;"><?php echo $admin['useremail'] ?></p>
                                                     </li>
                                                     <li class="w-100 d-flex align-items-center">
                                                         <p class="text-primary fw-semibold">Rôle :</p>
-                                                        <p class="mx-2">'.$admin['role'].'</p>
+                                                        <p class="mx-2"><?php echo $admin['role'] ?></p>
                                                     </li>
-                                            
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="info2">
-                                    <a href="./delete/admin/'.$admin['userid'].'" class="btn btn-danger">Delete</a>
+                                    <a href="./delete/admin/<?php echo $admin['userid'] ?>" class="btn btn-danger">Delete</a>
                                 </div>
                             </div>
                         </div>
-                                ';
-                        }
-                    ?>
                 </div>
+                <?php } ?>
             </div>
         </div>
     </section>
@@ -73,15 +67,15 @@
         </div>
         <div class="modal-body">
             <form id="form-contact" action="" method="POST">
+            <div class="mb-3">
+                    <label for="Nom" class="form-label">Full name</label>
+                    <input type="text" class="form-control" name="username" id="Nom" placeholder="Nom">
+                    <p class="" style="color: red;" id ="phoneerror"></p>
+                </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Matricule</label>
                     <input type="text" id="matricule" name="matricule" class="form-select" placeholder="Matricule">
                     <p class="" style="color: red;" id ="nameerror"></p>
-                </div>
-                <div class="mb-3">
-                    <label for="Nom" class="form-label">Full name</label>
-                    <input type="tel" class="form-control" name="username" id="Nom" placeholder="Nom">
-                    <p class="" style="color: red;" id ="phoneerror"></p>
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">email</label>
