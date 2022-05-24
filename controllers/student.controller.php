@@ -9,7 +9,7 @@ class studentController extends controller {
     // add student
     public function addNewStudent(){
         $student = new student();
-        $student -> addStudent($_POST['fullname'], $_POST['phone'], $_POST['class'], $_POST['matricule'], $_POST['gender'], $_POST['adresse'], $_POST['email'], $_POST['dob'], $_POST['parent']);
+        $student -> addStudent($_POST['fullname'], $_POST['phone'], $_POST['class'], $_POST['matricule'], $_POST['gender'], $_POST['adresse'], $_POST['email'], $_POST['dob']);
         redirect('/students');
     }
     // display students

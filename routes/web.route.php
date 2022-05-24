@@ -94,6 +94,10 @@ Route::get('/parents/delete/{id}',function($id){
 });
 
 Route::get('/dashboard',function(){
+    return Route::controller("dashboard", 'index');
+});
+
+Route::get('/dashboard',function(){
     return Route::view("dashboard");
 });
 

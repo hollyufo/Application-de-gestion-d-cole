@@ -10,7 +10,12 @@
         </div>
         <div class="container-fluid ps-5 pe-5 pb-5" id="parents">
             <div class="row row-cols-1 row-cols-md-3 g-4">
-                <?php foreach($data as $parent){ ?>
+                <?php 
+                $x = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'];
+                $i = 0;
+                foreach($data as $parent){ 
+                 $i++;   
+                    ?>
                 <!----===== Parents ===== -->
                 <div class="col">
                     <div class="card">
@@ -19,10 +24,10 @@
                                 <img src="./views/assets/img/blank-profile-picture-973460_640.png" class="rounded-circle teacher-img" alt="user">
                                 <br>
                                 <div id="parents">
-                                    <h5 class="border-0 bg-white name info-card w-100 text-center" role="button" data-bs-toggle="collapse" data-bs-target="#parent-one">
+                                    <h5 class="border-0 bg-white name info-card w-100 text-center" role="button" data-bs-toggle="collapse" data-bs-target="#parent-<?php echo $x[$i] ?>">
                                         <?php echo $parent['parentname'];   ?>
                                     </h5>
-                                    <div id="parent-one" class="collapse" data-bs-parent="#parents">
+                                    <div id="parent-<?php echo $x[$i] ?>" class="collapse" data-bs-parent="#parents">
                                         <div class="text-center">
                                             <ul>
                                                 <li class="w-100 mt-3 d-flex align-items-center">

@@ -9,7 +9,11 @@
         <div class="container-fluid ps-5 pe-5 pb-5" id="teachers">
             <div class="row row-cols-1 row-cols-md-4 g-4">
             <?php 
-                foreach($data as $teacher){ ?>
+                $x = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'];
+                $i = 0;
+                foreach($data as $teacher){ 
+                $i++;
+                    ?>
                 <!----===== teachers ===== -->
                 <div class="col">
                     <div class="card">
@@ -18,10 +22,10 @@
                                 <img src="./views/assets/img/blank-profile-picture-973460_640.png" class="rounded-circle teacher-img" alt="user">
                                 <br>
                                 <div id="questions">
-                                    <h5 class="border-0 bg-white name info-card w-100 text-center" role="button" data-bs-toggle="collapse" data-bs-target="#question-one">
+                                    <h5 class="border-0 bg-white name info-card w-100 text-center" role="button" data-bs-toggle="collapse" data-bs-target="#question-<?php echo $x[$i] ?>">
                                     <?php echo $teacher['teachername'] ?>   
                                     </h5>
-                                    <div id="question-one" class="collapse" data-bs-parent="#questions">
+                                    <div id="question-<?php echo $x[$i] ?>" class="collapse" data-bs-parent="#questions">
                                         <div class="text-center">
                                             <ul>
                                                 <li class="w-100 mt-3 d-flex align-items-center">
@@ -89,8 +93,8 @@
                     <p class="" style="color: red;" id ="classerror"></p>
                 </div>
                 <div class="mb-3">
-                    <label for="Address" class="form-label">Matrecule</label>
-                    <input type="text" class="form-control" name="matricule" id="id" placeholder="id">
+                    <label for="matricule" class="form-label">Matrecule</label>
+                    <input type="number" class="form-control" name="matricule" id="matricule" placeholder="Matricule">
                     <p class="" style="color: red;" id ="iderror"></p>
                 </div>
                 <div class="mb-3">
@@ -116,7 +120,7 @@
         </div>
       </div>
     </div>
-  </div>
+</div>
 
     <script src="./views/assets/js/dashboard.js"></script>
     <script src="./views/assets/js/teachervalidation.js" ></script>

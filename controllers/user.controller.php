@@ -27,7 +27,7 @@ class userController extends controller{
     // add user to the database
     public function addUser(){
         $user = new user();
-        $user->addUser($_POST['username'], $_POST['email'], $_POST['password'], $_POST['role'], $_POST['matricule']);
+        $user->addUser($_POST['username'], $_POST['email'], password_hash($_POST['password'], PASSWORD_DEFAULT), $_POST['role'], $_POST['matricule']);
         redirect('/admin');
     }
     // get all users

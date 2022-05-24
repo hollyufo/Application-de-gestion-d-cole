@@ -11,7 +11,11 @@
         <div class="container-fluid ps-5 pe-5 pb-5" id="students">
             <div class="row row-cols-1 row-cols-md-3 g-4">
             <?php 
-                foreach($data as $student){ ?>
+                $x = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'];
+                $i = 0;
+                foreach($data as $student){ 
+                $i++;   
+                    ?>
                 <!----===== Students ===== -->
                 <div class="col">
                     <div class="card">
@@ -20,10 +24,10 @@
                                 <img src="./views/assets/img/blank-profile-picture-973460_640.png" class="rounded-circle teacher-img" alt="user">
                                 <br>
                                 <div id="students">
-                                    <h5 class="border-0 bg-white name info-card w-100 text-center" role="button" data-bs-toggle="collapse" data-bs-target="#student-one">
-                                        <?php echo $student['studentname'] ?>   
+                                    <h5 class="border-0 bg-white name info-card w-100 text-center" role="button" data-bs-toggle="collapse" data-bs-target="#student-<?php echo $x[$i] ?>">
+                                    <?php echo $student['studentname'] ?>   
                                     </h5>
-                                    <div id="student-one" class="collapse" data-bs-parent="#students">
+                                    <div id="student-<?php echo $x[$i] ?>" class="collapse" data-bs-parent="#students">
                                         <div class="text-center">
                                             <ul>
                                                 <li class="w-100 mt-3 d-flex align-items-center">
@@ -31,7 +35,7 @@
                                                     <p class="mx-2"><?php echo $student['studentphone'] ?> </p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">Class Name :</p>
+                                                    <p class="text-primary fw-semibold">Class Number :</p>
                                                     <p class="mx-2"><?php echo $student['studentclass'] ?> </p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
@@ -75,7 +79,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form id="form-contact" action="" method="POST">
+            <form id="form-contact" method="POST">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Full name</label>
                     <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Full Name">
@@ -87,8 +91,11 @@
                     <p class="" style="color: red;" id ="phoneerror"></p>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Class Name</label>
-                    <input type="text" class="form-control" name="class" id="class" placeholder="name of class">
+                    <label for="exampleFormControlInput1" class="form-label">Class Number</label>
+                    <select class="form-select" name="class" id="class">
+                        <option value="One">One</option>
+                        <option value="Two">Two</option>
+                    </select>                    
                     <p class="" style="color: red;" id ="classerror"></p>
                 </div>
                 <div class="mb-3">
@@ -107,21 +114,16 @@
                 <div class="mb-3">
                     <label for="Address" class="form-label">Adresse</label>
                     <input type="text" class="form-control" name="adresse" id="adresse" placeholder="adresse">
-                    <p class="" style="color: red;" id ="adresserror"></p>
+                    <p style="color: red;" id ="adresserror"></p>   
                 </div>
                 <div class="mb-3">
-                    <label for="Address" class="form-label">email</label>
+                    <label for="email" class="form-label">email</label>
                     <input type="email" class="form-control" name="email" id="email" placeholder="email">
                     <p class="" style="color: red;" id ="iderror"></p>
                 </div>
                 <div class="mb-3">
                     <label for="dob" class="form-label">Date of Birthday</label>
                     <input type="date" class="form-control" name="dob" id="dob" placeholder="Date of Birthday">
-                    <p class="" style="color: red;" id ="subjecterror"></p>
-                </div>
-                <div class="mb-3">
-                    <label for="parent" class="form-label">Parent Name</label>
-                    <input type="text" class="form-control" name="parent" id="parent" placeholder="parent name">
                     <p class="" style="color: red;" id ="subjecterror"></p>
                 </div>
                 <div class="mb-3">
