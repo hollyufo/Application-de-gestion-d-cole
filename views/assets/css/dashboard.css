@@ -34,8 +34,8 @@ body{
     background-color: var(--primary-color);
     color: #fff;
 }
-.al{
-    overflow: hidden;
+.zindex{
+    margin:0 20px;
 }
 body.dark{
     --body-color: #18191a;
@@ -59,9 +59,11 @@ body.dark{
     z-index: 100;  
 }
 .sidebar.close{
-    width: 88px;
+    width: 130px;
 }
-
+.something{
+    margin-right:20px;
+}
 /* ===== Reusable code - Here ===== */
 .sidebar li{
     height: 50px;

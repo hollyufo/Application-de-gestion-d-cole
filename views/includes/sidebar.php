@@ -26,7 +26,7 @@
                 </div>
             </div>
 
-            <i class='bx bx-chevron-right toggle'></i>
+            <i class='bx bx-chevron-right toggle something2'></i>
         </header>
 
         <div class="menu-bar overflow-hidden">
