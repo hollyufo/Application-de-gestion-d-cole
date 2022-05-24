@@ -15,9 +15,12 @@ class teacherController extends controller {
     // display teachers
     public function showAllTeachers(){
         $teachers = new teacher();
-        $data = $teachers -> showTeachers();
+        if (isset($_GET['word'])) {
+            $data = $teachers -> showTeachersSearch($_GET['word'],$_GET['o']??'ASC');
+        } else {
+            $data = $teachers -> showTeachers($_GET['o']??'ASC');
+        }
         return Route::view("teachers", $data);
-
     }
     // update teacher 
     public function showOneTeacher($id){

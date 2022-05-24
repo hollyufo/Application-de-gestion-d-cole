@@ -15,7 +15,12 @@ class parentsController extends controller {
     // display parent
     public function showAllParents(){
         $Parents = new parents();
-        $data = $Parents -> showParents();
+        if (isset($_GET['word'])) {
+            $data = $Parents -> showParentsSearch($_GET['word'],$_GET['o']??'ASC');
+        }
+        else {
+            $data = $Parents -> showParents($_GET['o']??'ASC');
+        }
         return Route::view("parents", $data);
 
     }

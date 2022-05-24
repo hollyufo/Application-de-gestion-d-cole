@@ -11,8 +11,17 @@ class parents extends Model{
         $this->con->query($sql);
     }
     // display parents
-    public function showParents(){
+    public function showParents($order="ASC"){
         $sql = "SELECT * FROM parents";
+        $result = $this->con->query($sql);
+        $data = $result->fetchAll(PDO::FETCH_ASSOC);
+        return $data;
+    }
+    // display search parent
+    public function showParentsSearch($word, $order="ASC"){
+        if(!in_array($order,['ASC','DESC']))
+            throw new Exception('Invalid value"'.$order. '" for order!');
+        $sql = "SELECT * FROM parents WHERE parentname LIKE '%$word%' ORDER BY parentid ".$order;
         $result = $this->con->query($sql);
         $data = $result->fetchAll(PDO::FETCH_ASSOC);
         return $data;

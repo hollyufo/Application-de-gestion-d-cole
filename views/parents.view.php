@@ -6,6 +6,14 @@
     <section class="home">
         <div class="text c--flux">
             <span class="sub-text">Manage Parents</span>
+            <form action="http://localhost/application-de-gestion-d-cole/parents" class="d-flex" METHOD="GET">
+            <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <input type="text" name="word" class="form-control" placeholder="search.....">
+            </div>
+                <input type="submit" value="search" class="input-group-text" id="basic-addon1">
+            </div>
+        </form>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add New Parent</button>
         </div>
         <div class="container-fluid ps-5 pe-5 pb-5" id="parents">

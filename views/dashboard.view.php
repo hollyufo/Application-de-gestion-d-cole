@@ -7,9 +7,6 @@
           <div class="text">
              Dashboard
           </div>
-        <li class="search-box" style="margin-right: 300px">
-            <input type="text" placeholder="Search..." class="form-control">
-        </li>
         </div>
         <div class="container-fluid ps-5 pe-5 pb-5 ">
           <div class="row row-cols-1 row-cols-md-3 g-5 ">

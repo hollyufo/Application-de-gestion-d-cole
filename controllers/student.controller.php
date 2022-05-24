@@ -15,7 +15,11 @@ class studentController extends controller {
     // display students
     public function showAllStudents(){
         $students = new student();
-        $data = $students -> showStudents();
+        if(isset($_GET['word'])){
+            $data = $students -> showStudentsSearch($_GET['word'],$_GET['o']??'ASC');
+        }else{
+            $data = $students -> showStudents($_GET['o']??'ASC');
+        }
         return Route::view("students", $data);
 
     }

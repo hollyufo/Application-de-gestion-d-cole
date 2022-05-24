@@ -17,6 +17,16 @@ class teacher extends Model{
         $data = $result->fetchAll(PDO::FETCH_ASSOC);
         return $data;
     }
+    // display teachers search
+    public function showTeachersSearch($word, $order="ASC"){
+        if(!in_array($order,['ASC','DESC']))
+            throw new Exception('Invalid value"'.$order. '" for order!');
+        $sql = "SELECT * FROM teachers WHERE teachername LIKE '%$word%' ORDER BY teacherid ".$order;
+        echo $sql;
+        $result = $this->con->query($sql);
+        $data = $result->fetchAll(PDO::FETCH_ASSOC);
+        return $data;
+    }
     // edit teacher
     public function showOneTeacher($id){
         $sql = "SELECT * FROM teachers WHERE teacherid = '$id'";
