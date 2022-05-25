@@ -1,8 +1,8 @@
 <?php
 
-define("ABS_PATH","http://localhost/Template_MVC_Version1-master");
+define("ABS_PATH","http://localhost/application-de-gestion-d-cole");
 define("HOST","localhost");
-define("DATABASE","ooptest");
+define("DATABASE","school");
 define("USER","root");
 define("PASSWORD","");
 

@@ -3,48 +3,58 @@
 
     <section class="home">
         <div class="text c--flux">
-            <span class="sub-text">Manage your students</span>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add New Student</button>
+            <span class="sub-text">Manage your teachers</span>
+            <form action="http://localhost/application-de-gestion-d-cole/teachers" class="d-flex" METHOD="GET">
+            <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <input type="text" name="word" class="form-control" placeholder="search.....">
+            </div>
+                <input type="submit" value="search" class="input-group-text" id="basic-addon1">
+            </div>
+        </form>
+            <button type="button" class="btn btn-primary mx-5" data-bs-toggle="modal" data-bs-target="#exampleModal">Add New Teacher</button>
         </div>
-        <div class="container-fluid ps-5 pe-5 pb-5" id="students">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <!----===== Student 1 ===== -->
+        <div class="container-fluid ps-5 pe-5 pb-5" id="teachers">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+            <?php 
+                $x = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'];
+                $i = 0;
+                foreach($data as $teacher){ 
+                $i++;
+                    ?>
+                <!----===== teachers ===== -->
                 <div class="col">
                     <div class="card">
                         <div class="main1">
                             <div class="img-name d-flex flex-column m-3 ">
                                 <img src="./views/assets/img/blank-profile-picture-973460_640.png" class="rounded-circle teacher-img" alt="user">
                                 <br>
-                                <div id="students">
-                                    <h5 class="border-0 bg-white name info-card w-100 text-center" role="button" data-bs-toggle="collapse" data-bs-target="#student-one">
-                                        full name   
+                                <div id="questions">
+                                    <h5 class="border-0 bg-white name info-card w-100 text-center" role="button" data-bs-toggle="collapse" data-bs-target="#question-<?php echo $x[$i] ?>">
+                                    <?php echo $teacher['teachername'] ?>   
                                     </h5>
-                                    <div id="student-one" class="collapse" data-bs-parent="#students">
+                                    <div id="question-<?php echo $x[$i] ?>" class="collapse" data-bs-parent="#questions">
                                         <div class="text-center">
                                             <ul>
                                                 <li class="w-100 mt-3 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">Phone :</p>
-                                                    <p class="mx-2">0609653219</p>
+                                                    <p class="text-primary fw-semibold">Phone:</p>
+                                                    <p class="mx-2"><?php echo $teacher['teacherphone'] ?>  </p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">Class Name :</p>
-                                                    <p class="mx-2">lorem ipsum</p>
+                                                    <p class="text-primary fw-semibold">Class:</p>
+                                                    <p class="mx-2"><?php echo $teacher['teacherclass'] ?>  </p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">Parent Name :</p>
-                                                    <p style="margin-left: 5px;">lorem ipsum</p>
+                                                    <p class="text-primary fw-semibold">Matrecule:</p>
+                                                    <p style="margin-left: 5px;"><?php echo $teacher['teacheride'] ?>  </p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">Student id :</p>
-                                                    <p class="mx-2">16616671</p>
+                                                    <p class="text-primary fw-semibold">Gender:</p>
+                                                    <p class="mx-2"><?php echo $teacher['teachergender'] ?>  </p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">Gender :</p>
-                                                    <p class="mx-2">Male</p>
-                                                </li>
-                                                <li class="w-100 d-flex align-items-center">
-                                                    <p class="text-primary fw-semibold">Subject :</p>
-                                                    <p class="mx-2">lorem ipsum</p>
+                                                    <p class="text-primary fw-semibold">Subject:</p>
+                                                    <p class="mx-2"><?php echo $teacher['teachersubject'] ?>  </p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -52,13 +62,13 @@
                                 </div>
                             </div>
                             <div class="info2">
-                                <a href="editstudent" class="btn btn-primary">Edit</a>
-                                <a href="#" class="btn btn-danger">Delete</a>
+                                <a href="./editteacher/<?php echo $teacher['teacherid'] ?>" class="btn btn-primary">Edit</a>
+                                <a href="teachers/delete/<?php echo $teacher['teacherid'] ?>" class="btn btn-danger">Delete</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!----===== Student 2 ===== -->
+                <?php } ?>
             </div>
         </div>
     </section>
@@ -67,14 +77,14 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Add students</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Add teacher</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
             <form id="form-contact" action="" method="POST">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Full name</label>
-                    <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Full Name">
+                    <input type="text" id="fullname" name="fullname" class="form-select" placeholder="Full Name">
                     <p class="" style="color: red;" id ="nameerror"></p>
                 </div>
                 <div class="mb-3">
@@ -84,17 +94,15 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Class</label>
-                    <input type="text" class="form-control" name="class" id="class" placeholder="name of class">
+                    <select class="form-select" name="class" id="class">
+                        <option value="one">one</option>
+                        <option value="two">two</option>
+                    </select>
                     <p class="" style="color: red;" id ="classerror"></p>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">parent</label>
-                    <input type="text" class="form-control" name="class" id="parent" placeholder="name of parent">
-                    <p class="" style="color: red;" id ="classerror"></p>
-                </div>
-                <div class="mb-3">
-                    <label for="Address" class="form-label">ID</label>
-                    <input type="text" class="form-control" name="id" id="id" placeholder="id">
+                    <label for="matricule" class="form-label">Matrecule</label>
+                    <input type="number" class="form-control" name="matricule" id="matricule" placeholder="Matricule">
                     <p class="" style="color: red;" id ="iderror"></p>
                 </div>
                 <div class="mb-3">
@@ -120,14 +128,11 @@
         </div>
       </div>
     </div>
-  </div>
-  
+</div>
+
     <script src="./views/assets/js/dashboard.js"></script>
-
     <script src="./views/assets/js/teachervalidation.js" ></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </body>
 </html>

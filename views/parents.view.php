@@ -1,42 +1,58 @@
 <!------- sidebar-->
-<?php require_once 'includes/sidebar.php'; ?>
+<?php require_once 'includes/sidebar.php'; 
+        // print_r($data);
+    ?>
 
     <section class="home">
         <div class="text c--flux">
             <span class="sub-text">Manage Parents</span>
+            <form action="http://localhost/application-de-gestion-d-cole/parents" class="d-flex" METHOD="GET">
+            <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <input type="text" name="word" class="form-control" placeholder="search.....">
+            </div>
+                <input type="submit" value="search" class="input-group-text" id="basic-addon1">
+            </div>
+        </form>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add New Parent</button>
         </div>
         <div class="container-fluid ps-5 pe-5 pb-5" id="parents">
             <div class="row row-cols-1 row-cols-md-3 g-4">
-                <!----===== Parent 1 ===== -->
+                <?php 
+                $x = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'];
+                $i = 0;
+                foreach($data as $parent){ 
+                 $i++;   
+                    ?>
+                <!----===== Parents ===== -->
                 <div class="col">
                     <div class="card">
                         <div class="main1">
-                            <div class="img-name d-flex flex-column m-3 ">
+                            <div class="img-name d-flex flex-column m-4">
                                 <img src="./views/assets/img/blank-profile-picture-973460_640.png" class="rounded-circle teacher-img" alt="user">
                                 <br>
                                 <div id="parents">
-                                    <h5 class="border-0 bg-white name info-card w-100 text-center" role="button" data-bs-toggle="collapse" data-bs-target="#parent-one">
-                                        full name   
+                                    <h5 class="border-0 bg-white name info-card w-100 text-center" role="button" data-bs-toggle="collapse" data-bs-target="#parent-<?php echo $x[$i] ?>">
+                                        <?php echo $parent['parentname'];   ?>
                                     </h5>
-                                    <div id="parent-one" class="collapse" data-bs-parent="#parents">
+                                    <div id="parent-<?php echo $x[$i] ?>" class="collapse" data-bs-parent="#parents">
                                         <div class="text-center">
                                             <ul>
                                                 <li class="w-100 mt-3 d-flex align-items-center">
                                                     <p class="text-primary fw-semibold">Phone :</p>
-                                                    <p class="mx-2">0609653219</p>
+                                                    <p class="mx-2"><?php echo $parent['parentphone'];   ?></p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
                                                     <p class="text-primary fw-semibold">Job :</p>
-                                                    <p class="mx-2">Prostitute</p>
+                                                    <p class="mx-2"><?php echo $parent['parentjob'];   ?></p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
                                                     <p class="text-primary fw-semibold">Gender :</p>
-                                                    <p class="mx-2">Male</p>
+                                                    <p class="mx-2"><?php echo $parent['parentgender'];   ?></p>
                                                 </li>
                                                 <li class="w-100 d-flex align-items-center">
                                                     <p class="text-primary fw-semibold">Adresse :</p>
-                                                    <p class="mx-2">lorem ipsum</p>
+                                                    <p class="mx-2"><?php echo $parent['parentaddress'];   ?></p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -44,13 +60,14 @@
                                 </div>
                             </div>
                             <div class="info2">
-                                <a href="./editparent" class="btn btn-primary">Edit</a>
-                                <a href="#" class="btn btn-danger">Delete</a>
+                                <a href="editparent/<?php echo $parent['parentid'] ?>" class="btn btn-primary">Edit</a>
+                                <a href="parents/delete/<?php echo $parent['parentid'] ?>" class="btn btn-danger">Delete</a>
                             </div>
                         </div>
                     </div>
+
                 </div>
-                <!----===== Parent 2 ===== -->
+                <?php } ?>
             </div>
         </div>
     </section>
@@ -76,7 +93,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="Address" class="form-label">Job</label>
-                    <input type="text" class="form-control" name="id" id="id" placeholder="id">
+                    <input type="text" class="form-control" name="job" id="id" placeholder="Job">
                     <p class="" style="color: red;" id ="iderror"></p>
                 </div>
                 <div class="mb-3">
@@ -89,7 +106,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="subject" class="form-label">Addresse</label>
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="subject">
+                    <input type="text" class="form-control" name="adresse" id="adresse" placeholder="adresse">
                     <p class="" style="color: red;" id ="subjecterror"></p>
                 </div>
                 <div class="mb-3">

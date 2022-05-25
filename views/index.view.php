@@ -10,20 +10,20 @@
 </head>
 <body  class="bg-image"
 style="
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/de/WikiAfrica_Schools_training_African_School_for_Excellence_%2816%29.jpg');
+  background-image: url('https://pbs.twimg.com/media/ERoOffkU0AE-sYm.jpg');
 background-repeat: no-repeat; background-size: 100%; background-position: center;
 ">
     <div style="background-color: lightgrey; opacity: 70%; width: 100%; height: 100vh;">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.view.php">School management</a>
-                <a href="dashboard.view.php" class="btn btn-dark d-flex">Login</a>
+                <a class="navbar-brand" href="./index.html">School management</a>
+                <a href="./login" class="btn btn-dark d-flex">Login</a>
             </div>
         </nav>
         <div class="text-center text-black" style="margin-top: 200px;">
             <h1><b>Hello!</b></h1>
             <h3>No Account ? ask your admin to create one for you </h3>
-            <h5>Already have an account ? <a href="login.view.php">Login here.</a></h5>
+            <h5>Already have an account ? <a href="./login">Login here.</a></h5>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
